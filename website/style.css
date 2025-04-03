@@ -1,0 +1,401 @@
+.news-item time,
+.product-info h2,
+.poll-section > p:first-of-type,
+.footer-top h2,
+.footer-top p,
+.footer-top ul li a,
+.footer-bottom a {
+    color: #c00;
+}
+.footer-top ul li a:hover,
+.footer-bottom a:hover {
+    text-decoration: none;
+}
+.reviewer-text-container,
+.reviewer-nickname-container,
+.review-row figcaption,
+.review-row h3,
+.prod-review,
+.similar-products h2,
+.social-media article h3,
+.dropdown,
+.product-info p,
+.product-info h1,
+.banner p,
+.grid-section h1,
+.grid-section p,
+.news-section h2,
+.news-item h3,
+.poll-section h3,
+.poll-section > h2:first-of-type
+{
+    color: #575859;
+}
+
+/* Hover effect on links */
+.nav-list a:hover {
+    background-color: #C5110B; /* Change background colour to red on hover */
+    color: white; /* Change text colour to white when hovering */
+}
+
+.product-info button:hover {
+    background-color: darkred; /* Darker red on hover for emphasis */
+}
+
+.read-more-btn:hover {
+    background-color: darkred; /* Darker red when hovered */
+}
+
+/* Colours */
+.read-more-btn { 
+    background-color: #C5110B; /* Red background for the button */
+    color: white; /* White text for the button */ 
+    border: none; /* Removes default button border */
+    border-radius: 10px;
+    cursor: pointer; /* Cursor turns to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.product-info button{
+    background-color: #C5110B;
+    color: rgb(255, 255, 255);
+    cursor: pointer; /* Changes the cursor to pointer for interactivity */
+    transition: background-color 0.3s; /* Smooth colour transition effect */
+}
+
+.banner-image {
+    border-bottom: 8px solid #575859;
+}
+
+.footer-bottom{
+    background-color: #C5110B;
+}
+
+.footer-top{
+    background-color: white ;
+}
+
+.stars {
+    color: red; /* Makes the stars red */
+  }
+
+/* Font families*/
+.reviewer-text-container,
+.reviewer-nickname,
+.footer-bottom,
+.news-item p,
+.news-item h3,
+.poll-section p,
+.grid-section article p,
+.news-item p,
+.news-item h3,
+.product-info h2,
+.product-info p,
+.product-info button,
+.social-media article h3,
+.review-row figcaption,
+.review-row h3,
+.read-more-btn,
+.footer,
+.footer-top h2,
+.footer-top p,
+.news-and-poll 
+{
+    font-family: Arial, sans-serif;
+}
+#pollResults,
+.grid-section article h1,
+.banner p,
+.product-info h1,
+.prod-review,
+.similar-products h2,
+.review-row h2,
+.news-section h2,
+.poll-section h2,
+.poll-section h3 
+{
+    font-family: 'iceberg', cursive;
+}
+
+/* Link styles */
+.nav-list a {
+    text-decoration: none;
+}
+
+.footer-bottom a {
+    text-decoration: underline; /* Underline the links */
+}
+
+.footer-bottom a {
+    color: black; /* Set links to black */
+    text-decoration: underline; /* Underline the links */
+}
+
+.footer-top ul {
+    text-decoration: underline; /* Add underline to links */
+}
+
+.footer-bottom a:hover {
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.footer-top ul{
+    list-style: none;
+}
+
+@media (min-width: 768px) {
+.robot {
+    color: #C5110B; /* Red colour for text */
+    font-family: 'Damion', sans-serif;
+    font-size: 70px;
+}
+.juice {
+    font-family: 'Damion', sans-serif;
+    color: black;
+    font-size: 70px;
+}
+.tagline {
+    font-family: Arial, sans-serif;
+    color: #333; /* Dark colour for the tagline */
+    font-size: 12px;
+}
+.nav-list a {
+    font-size: 1rem;
+    color: black; /* Keep text colour black */
+    font-family: Arial, sans-serif; /* Font style */
+    transition: background-color 0.3s ease; /* Smooth background-colour transition on hover */
+}
+      .stars {
+        color: red; /* Makes the stars red */
+      }
+
+/* Font sizes */
+.reviewer-nickname{
+    font-size: 1.2em;
+}
+
+.review-row h3{
+    font-size: 1.2em;
+}
+
+.product-info button{
+    font-size: 18px; /*Sets a readable font size */
+}
+
+.read-more-btn{
+    font-size: 16px;
+}
+
+.review-row figcaption{
+    font-size: 1em;
+}
+
+.prod-review{
+    font-size: 20px;
+}
+
+.similar-products h2{
+    font-size: 28px;
+}
+
+.product-info h1 {
+    font-size: 1.8rem; /*Larger font size for the product name */
+}
+
+.product-info h2 {
+    font-size: 1.4rem; /*Larger font size for the product name */
+}
+
+.product-info p {
+    font-size: 1.1rem; /*Sets a readable font size */
+}
+
+.dropdown {
+    font-size: 1.2rem;
+}
+
+.footer-top p,
+.footer-top ul,
+.footer-bottom {
+    font-size: 14px;
+}
+.footer-top ul li a,
+.news-item h3,
+.poll-section p,
+.poll-section ul li 
+{
+    font-size: 16px;
+}
+.banner p {
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+}
+.news-item p {
+    font-size: 15px;
+    text-align: left;
+}
+.news-item time {
+    font-size: 15px;
+    text-align: right;
+    font-style: italic;
+}
+
+.poll-section h3 {
+    font-size: 22px;
+}
+
+.news-item h3 {
+    font-size: 20px;
+}
+
+.footer-top h2 {
+    font-size: 30px;
+}
+.news-section h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.grid-section article h1 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.grid-section article p {
+    font-size: 1.0rem;
+    margin-top: 10px;
+    text-align: left;
+}
+}
+
+@media (max-width: 767px) {
+    .robot {
+        color: #C5110B; /* Red colour for text */
+        font-family: 'Damion', sans-serif;
+        font-size: 50px;
+    }
+    .juice {
+        font-family: 'Damion', sans-serif;
+        color: black;
+        font-size: 50px;
+    }
+    .tagline {
+        font-family: Arial, sans-serif;
+        color: #575859; /*Dark colour for the tagline */
+        font-size: 8px;
+    }
+    .nav-list a {
+        font-size: 12px;
+        color: black; /*Keep text colour black */
+        font-family: Arial, sans-serif; /*Font style */
+        transition: background-color 0.3s ease; /*Smooth background-colour transition on hover */
+    }
+    /* Hover effect on links */
+    .nav-list a:hover {
+        background-color: #C5110B; /*Change background colour to red on hover */
+        color: white; /*Change text colour to white when hovering */
+    }
+
+    /* Font sizes */
+    .prod-review {
+        font-size: 18px;
+    }
+
+    .read-more-btn {
+        font-size: 14px;
+    }
+
+    .review-row h3{
+        font-size: 1rem;
+}
+
+    .review-row figcaption {
+        font-size: 0.9rem;
+    }
+
+    .product-info h1 {
+        font-size: 2.5rem; /* Slightly smaller font size */
+    }
+
+    .product-info h2 {
+        font-size: 1.8rem; /* Adjust font size */
+    }
+
+    .product-info p {
+        font-size: 1rem;
+    }
+
+    .product-info button {
+        font-size: 16px;
+    }
+
+    .dropdown{
+        font-size: 1rem;
+    }
+
+    .footer-top p,
+    .footer-top ul,
+    .footer-bottom {
+        font-size: 10px;
+    }
+    .footer-top ul li a,
+    .poll-section p,
+    .poll-section ul li {
+        font-size: 10px;
+    }
+    .banner p {
+        font-size: 20px;
+        text-align: center;
+    }
+    .news-item p {
+        font-size: 15px;
+        text-align: left;
+    
+    }
+    .news-item time {
+        display: block;
+        font-size: 15px;
+        text-align: right;
+        font-style: italic;
+    }
+    
+    .poll-section h3 {
+        font-size: 22px;
+
+    }
+
+    .poll-section > p:first-of-type {
+        font-size: 12px;
+    }
+
+    .poll-section > h2:first-of-type {
+        font-size: 22px;
+    }
+
+    .poll-section p {
+        font-size: 12px;
+    }
+    
+    .news-item h3 {
+        font-size: 20px;
+    }
+
+    .footer-top h2 {
+        font-size: 18px;
+    }
+    .news-section h2 {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+    .grid-section article h1 {
+        font-size: 15px;
+        margin-top: 10px;
+        text-align: left;
+    }
+    
+    .grid-section article p {
+        font-size: 12px;
+        margin-top: 10px;
+        text-align: left;
+    }
+}

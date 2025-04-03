@@ -1,0 +1,743 @@
+/* Default styles (applied to all screen sizes) */
+.container {
+    display: grid;
+    column-gap: 10px; /* Small gap between Robot and Juice */
+    margin: 10px; /* Add some space from the edge of the page */
+}
+
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    body {
+        margin-right: 210px;/* right margin around the entire webpage */
+        margin-left: 210px; /* left margin around the entire webpage */
+        height: 100vh; /* Full viewport height */
+        box-sizing: border-box; /* Make sure padding and margin are included in the total width and height */
+        background-color: rgb(236, 236, 236); 
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 170px 170px; /*Create two columns*/
+        grid-gap: 1px; /*Gap between columns*/
+    }
+
+    .robot {
+        grid-column: 1; /*Place on the first column*/
+    }
+
+    .juice {
+        grid-column: 2; /*Place on the second column*/
+    }
+
+    .tagline {
+        margin-top: -20px; /*Space between Juice and the tagline*/
+        margin-left: 10px;
+    }
+
+    .navbar {
+        border-top: 1px solid #575859;
+        border-bottom: 1px solid #575859;
+    }
+    
+    .nav-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+        justify-items: stretch; /*strech the containers*/
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none; /*remove the links*/
+    }
+    
+    .nav-list li {
+        position: relative; /* Ensure positioning for the pseudo-element */
+    }
+    
+    .nav-list a {
+        padding: 25px 0;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    
+    /*Add border separator between items */
+    .nav-list li:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 25%;
+        width: 1px;
+        height: 50%;
+        background-color: #575859;
+    }
+
+    .banner-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-bottom: 10px solid #575859;
+    }
+    /*banner*/
+    .banner p{
+        width:auto;
+    }
+    /*Grid section for the index page */
+    .grid-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        border-top: 2px solid #575859;
+        border-bottom: 2px solid #575859;
+        padding: 60px 0;
+    }
+
+    .grid-section article {
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    .grid-section article p{
+        width: 80%;
+    }
+
+    .grid-section img {
+        max-width: 100%;
+        width: 400px;
+        height: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    }
+    /*News and poll section sizing and postioning */
+    .news-and-poll {
+        display: grid;
+        grid-template-columns: 2fr 1fr;  /*2 columns*/
+        gap: 20px;
+        max-width: 2560px;
+        margin: 10px 0;
+        padding: 20px;
+    }
+
+    .news-section {
+        padding-right: 20px;
+    }
+
+    .news-item {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+
+    .news-item time {
+        margin-left: 85%;
+    }
+    /*Poll section for Index page*/
+    .poll-section {
+        padding: 20px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .poll-section form {
+        margin: 50px;
+    }
+
+    .poll-section ul {
+        margin-top: 10px;
+        padding-left: 20px;
+        list-style-type: none;
+    }
+
+    .poll-section ul li {
+        margin-bottom: 20px;
+    }
+
+    /* Footer section */
+    .footer-top {
+        display: grid;
+        grid-template-columns: 150px 350px 800px;
+        gap: 20px;
+        border-top: 1px solid #333333;
+    }
+    
+    .footer-top img {
+        max-width: 100%;
+        height: auto;
+        grid-column: 1;
+        padding: 20px;
+    }
+    .reviews{
+        margin-left: 100px;
+    }
+    .footer-top h2 {
+        margin-bottom: 10px;
+        grid-column: 2;
+    }
+    
+    .footer-top p {
+        margin-bottom: 10px;
+        grid-column: 2;
+    }
+
+    .links h2 {
+        margin-left: 600px;
+    }
+
+    .links ul li {
+        margin-left: 600px;
+    }
+    
+    .footer-top ul {
+        list-style-type: none;
+        padding: 0;
+        grid-column: 3;
+    }
+    
+    .footer-top ul li {
+        margin-bottom: 10px;
+    }
+    
+    .footer-top ul li a {
+        text-decoration: none;
+    }
+        /*Product Page*/
+    /*Main product container styling */
+    .page-different .nav-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+        justify-items: stretch;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+        border-right: 1px solid #575859;
+    }
+
+    .page-different .nav-list a {
+        padding: 25px 0px;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    /*Postioning for the product container*/
+    .product-container {
+        display: flex; /* Flexbox layout */
+        align-items: flex-start; /*Align content to the top*/
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+        
+    /*Left column for thumbnails */
+    .image-column {
+        display: flex;
+        flex-direction: column; /*Stack thumbnails vertically*/
+        gap: 10px; /*Space between thumbnails */
+    }
+        
+    /* Styling for thumbnails */
+    .image-column img {
+        max-width: 120px;
+        width: 100%; /*fixed thumbnail width*/
+        height: auto; /* Maintain aspect ratio*/
+        cursor: pointer; /* Change cursor on hover*/
+        border: 2px solid red; /*Add a border*/
+    }
+        
+    /*Right column for the main image*/
+    .main-image-column {
+        flex: 2; /*Allow the main image column to be larger*/
+        text-align: center; /*Center the main image*/
+        margin: 20px;
+    }
+    /*Main image sizing */
+    .main-image { 
+        width: 100%;
+        max-width: 1980px; /*width for the main image */
+        height: auto; /* Maintain aspect ratio */
+    }
+        
+    /*Product information section*/
+    .product-info {
+        flex: 3; /*Product info column larger */
+        width: 100%;
+        max-width: 380px;
+    }
+
+    /*Product header 1*/
+    .product-info h1 {
+        margin-top: 30px;
+    }
+    /*Product header 2*/
+    .product-info h2 {
+        margin-bottom: 10px;
+    }
+    /*Product paragraph*/
+    .product-info p {
+        margin-top: 5px; /* Adds space below each paragraph */
+    }
+    /*Buy now button postioning*/
+    .product-info button {
+        padding: 10px 120px; /*internal padding*/
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    /*Postioning for the dropdown box the product page*/
+    .dropdown {
+        width: 100%;
+        max-width: 155px;
+        height: auto;
+        padding: 5px;
+        margin: 0 3px 10px; /*margin-left, margin-right, and margin-bottom*/
+    }
+
+    /*Postioning for the social media section the product page*/
+    .social-media article {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        gap: 8px; /* Add spacing between items */
+    }
+
+    /*Postioning for the header 3 the product page*/
+    .social-media article h3 {
+        text-align: right;
+    }
+    /*Social icons*/
+    .social-icon {
+        width: 15px; /*Set the width for icons */
+        height: auto; /*Set the height for icons */
+        margin-top: 20px;
+    }
+    /*Postioning for the section similar products the product page*/
+    .similar-products {
+        text-align: center;
+        width: 100%;
+        border-top: 1px solid #575859; /*Border on top*/
+        border-bottom: 1px solid #575859; /*Border on bottom*/
+        margin: 0 10px; /*Padding around the content */
+    }
+
+    /*Postioning for header 2 for similar product section on the product page*/
+    .similar-products h2 {
+        margin-bottom: 20px;/*Adds space below the header*/
+        text-align: left;
+    }
+
+    /*Postioning and sizing for images for similar product section on the product page*/
+    .similar-products img {
+        margin: 0 5px; /* Space between images */
+        width: 15%; /*6 images in a row */
+        border-radius: 5px; /*rounded corners to the images*/
+        margin-bottom: 10px;
+    }
+
+    /* Postioning and sizing for the reviews on the products page */
+    .product-review {
+        display: grid;
+        grid-template-rows: repeat(5, 1fr); /* Five rows */
+        margin:0;
+        padding: 0;
+    }
+    /* Postioning and sizing for the reviews on the products page */
+    .review-row {
+        display: grid;
+        grid-template-columns: 150px 220px 150px 1fr; /* Image, h3, empty space, figcaption (4 columns) */
+        align-items: center;
+        border-top: 1px solid #575859; /* Border on top */
+        margin: 10px 0; /* Adds padding around the content */
+        padding: 20px;
+    }
+    /*Postioning and sizing for the image products page*/
+    .review-row img {
+        grid-column: 1;
+        width: 70%;
+        max-width: 180px;
+        height: auto;
+        display: block;
+        margin-left: 42px;
+        margin-top: 10px;
+    }
+
+    .review-row:nth-of-type(2) img,
+    .review-row:nth-of-type(3) img,
+    .review-row:nth-of-type(5) img {
+        border-radius: 20px; /*rounded borders to the 2nd, 3rd, and 5th rows' images */
+    }
+
+    /*Postioning for the header 2 products page*/
+    .review-row h3 {
+        grid-column: 2;
+        margin-top: -80px;
+        margin-left:20px;
+    }
+    /*Postioning for the caption products page*/
+    .review-row figcaption {
+        grid-column: 4;
+        margin-top: -80px;
+    }
+    /*Postioning for the paragraphs products page*/
+    .review-row p {
+        grid-column: 3;
+        margin: 0;
+    }
+    /* Postioning for header 2 on product page*/
+    .review-row h2 {
+        margin-bottom: 60px;
+        padding: 0;
+        margin-left:20px;
+    }
+    /* Adds border to the last row to the bottom*/
+    .review-row:last-child {
+        border-bottom: 1px solid #575859;
+    }
+    /* Read more button */
+    .read-more-btn { 
+        padding: 10px 25px; /*Padding inside the button*/
+        margin-bottom: 20px; /*spacing below the button*/
+        margin-left: 44%;
+        margin-right: 43%;
+    }
+    /* read more reviews images sizing */
+/* Styling the nickname (h3) */
+.user-review {
+    display: grid;
+    grid-template-columns: 100px 220px 150px 1fr; /* 4 columns: Image, Name, Empty Space, Review Text */
+    align-items: center;
+    border-top: 1px solid #575859;
+    border-bottom: 1px solid #575859;
+    padding: 20px; /* Padding inside each review */
+    margin-bottom: 20px; /* Adds space between each review */
+
+}
+
+.reviewer-image-container {
+    grid-column: 1;
+    width: 70%;
+    max-width: 180px;
+    height: auto;
+    display: block;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.reviewer-nickname-container {
+    grid-column: 2;
+    margin-left: 25px;
+}
+
+.empty-space-container {
+    grid-column: 3;
+}
+
+.reviewer-text-container{
+    grid-column: 4;
+}
+}
+
+/*Mobile Version Grid*/
+@media (max-width: 767px) {
+    /*Styling for entire page*/
+    body {
+        margin: 28px;
+        height: 100vh;
+        box-sizing: border-box;
+        background-color: rgb(236, 236, 236);
+    }
+    /* Robot juice and tagline container */
+    .container {
+        grid-template-areas: "robot juice";
+        grid-template-columns: 90px 100px;
+        align-items: start;
+        justify-content: start;
+        column-gap: 30px;
+    }
+
+    .tagline {
+        margin-top: -12px;
+        margin-left: 10px;
+    }
+    /*Navbar*/
+    .navbar{
+        border-top:1px solid #575859;
+        border-bottom:1px solid #575859;
+    }
+    .nav-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+        justify-items: stretch;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .nav-list li {
+        position: relative;
+    }
+    
+    .nav-list a {
+        padding: 15px 0; /*padding for mobile */
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    
+    .nav-list li:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 25%;
+        width: 1px;
+        height: 50%; /*Set height*/
+        background-color: #575859;
+    }
+
+    /*Banner*/
+    .banner-image {
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        border-bottom: 5px solid #575859;
+    }
+
+    /*Grid for 4 images section */
+    .grid-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 20px 10px;
+        border-top: 1px solid #575859;
+        border-bottom: 1px solid #575859;
+    }
+
+    .grid-section article {
+        text-align: left;
+        margin: 0;
+    }
+
+    .grid-section img {
+        max-width: 80%;
+        height: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    }
+    /*News and poll section*/
+    .news-and-poll {
+        display: flex;
+        display: block;
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .news-section {
+        border: none;
+        padding: 0;
+    }
+
+    .news-item {
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .poll-section {
+        padding: 15px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .poll-section ul {
+        margin-top: 10px;
+        padding-left: 15px;
+        list-style-type: none;
+    }
+
+    .poll-section ul li {
+        margin-bottom: 5px;
+    }
+    /*Footer mobiles  */
+
+  
+      .footer-top img {
+          max-width: 100%;
+          height: auto;
+          padding-top: 20px;
+          margin-left: 90px;
+      }
+  
+        .footer-bottom p {
+          text-align: center;
+      }
+
+      .footer-top h2 {
+        text-align: center;
+    }
+
+    .footer-top p{
+        text-align: center;
+    }
+
+    .footer-top ul{
+        text-align: center;
+        margin-right: 45px;
+    }
+
+    /* product page */
+
+    .product-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        margin: 10px;
+    }
+        
+    .main-image-column {
+        text-align: center;
+        margin: 10px 0;
+        order: 1; /* Ensure the main image stays on top */
+    }
+        
+    .main-image {
+        width: 100%; /* Adjust size for smaller screens */
+        max-width: 500px;
+        height: auto;
+    }
+
+    .image-column {
+        display: flex;
+        flex-direction: row; /* Display thumbnails horizontally */
+        justify-content: center;
+        gap: 20px; /* Space between thumbnails */
+        margin-bottom: 20px;
+        order: 2; /* image column comes second */
+    }
+        
+        .image-column img {
+            max-width: 100px; /* Thumbnail size */
+            cursor: pointer;
+            border: 1px solid red;
+        }
+        
+        /* Product Info */
+        .product-info {
+            width: 100%; /* Full width for smaller screens */
+            max-width: 90%; /* Maintain some margin around the content */
+            margin: 10px 0;
+            text-align: center; /* Center-align text for mobile */
+            order: 3
+        }
+        
+        .product-info h1 {
+            margin:0;
+        }
+
+        .product-info p {
+            margin: 10px 0;
+        }
+        
+        .product-info button {
+            width: 100%; /* Full-width button */
+            padding: 10px;
+            margin-top: 10px;
+        }
+        
+        /* Dropdowns */
+        .dropdown {
+            width: 100%; /* Full width for dropdowns */
+            max-width: 290px; /* Limit max width */
+            margin-bottom: 10px;
+            flex-direction: row;
+        }
+        
+        /* Social Media */
+        .social-media article {
+            flex-direction: column; /*Stack icons vertically*/
+            align-items: center;
+            gap: 5px;
+            text-align: center;
+        }
+        
+        .social-media .social-icon {
+            width: 20px; /* Smaller icons */
+            margin: 5px;
+        }
+    
+        /* Similar Products */
+        .similar-products {
+            text-align: center;
+            margin: 20px 0;
+            border-top:1px solid #575859;
+            border-bottom:1px solid #575859;
+        }
+    
+        .similar-products img {
+            width: 30%; /* Smaller images to fit mobile screens */
+            margin: 5px;
+        }
+    
+        /* Product Reviews */
+        .prod-review {
+            text-align: center;
+        }
+    
+        .product-review {
+            display: flex;
+            flex-direction: column; /* Stack reviews vertically */
+            gap: 15px;
+        }
+    
+        .review-row {
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            align-items: center;
+            text-align: center;
+            border-top: 1px solid #575859;
+            padding: 10px;
+        }
+    
+        .review-row img {
+            width: 60%; /* Smaller images */
+            max-width: 120px;
+            height: auto;
+            margin: 10px 0;
+        }
+    
+        .review-row:nth-of-type(2) img,
+        .review-row:nth-of-type(3) img,
+        .review-row:nth-of-type(5) img {
+            border-radius: 20px; /* Apply rounded borders to the 2nd, 3rd, and 5th rows' images */
+        
+        }
+
+        .review-row h3 {
+            margin: 5px 0;
+        }
+        .read-more-btn {
+            width: 100%; /*Full width for the button */
+            padding: 10px;
+        }
+
+        .user-review {
+            grid-template-columns: 1fr; /* Stack the columns */
+            padding: 15px;
+            border-top: 1px solid#575859;
+            border-bottom: 1px solid#575859;
+            text-align: center;
+            align-items: center;
+        }
+    
+        .reviewer-image-container {
+            width: 60%; /* Smaller images */
+            max-width: 120px;
+            height: auto;
+            margin-left: 22%;
+            position: relative;
+        }
+    
+        .reviewer-nickname-container,
+        .reviewer-text-container {
+            margin-left: 0;
+            padding-top: 10px; /* Add space between the elements */
+        }
+    
+        .empty-space-container {
+            display: none; /* Remove the empty space container */
+        }
+}
